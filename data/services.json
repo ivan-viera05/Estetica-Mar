@@ -1,0 +1,231 @@
+{
+    "services": [
+        {
+            "id": "hifu",
+            "name": "HIFU",
+            "shortDescription": "Ultrasonido focalizado para tensar y rejuvenecer la piel",
+            "fullDescription": "HIFU (High-Intensity Focused Ultrasound) es un tratamiento no invasivo que utiliza energía de ultrasonido focalizado para estimular la producción de colágeno y elastina, logrando un efecto lifting natural.",
+            "benefits": [
+                "Rejuvenecimiento facial sin cirugía",
+                "Efecto tensor inmediato",
+                "Estimulación de colágeno natural",
+                "Resultados duraderos"
+            ],
+            "duration": "60-90 minutos",
+            "sessions": "1-2 sesiones por año",
+            "mainImage": "Mujer1Hifu.png",
+            "galleryImages": [
+                "Hombre1Hifu.png",
+                "hifu-treatment.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/hifu"
+        },
+        {
+            "id": "criofraxis",
+            "name": "Criofraxis",
+            "shortDescription": "Tratamiento reductor con tecnología de frío localizado",
+            "fullDescription": "La Criofraxis es un tratamiento no invasivo que utiliza el frío para reducir la grasa localizada y mejorar la apariencia de la celulitis.",
+            "benefits": [
+                "Reducción de grasa localizada",
+                "Mejora de la celulitis",
+                "No invasivo",
+                "Sin tiempo de recuperación"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "6-8 sesiones",
+            "mainImage": "MujerCriofraxis.png",
+            "galleryImages": [
+                "Mujer2Criofraxis.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/criofraxis"
+        },
+        {
+            "id": "limpieza-cutis",
+            "name": "Limpieza de Cutis",
+            "shortDescription": "Limpieza profunda personalizada para una piel radiante",
+            "fullDescription": "Tratamiento completo que incluye limpieza profunda, exfoliación, extracción y mascarillas específicas para tu tipo de piel.",
+            "benefits": [
+                "Piel más limpia y luminosa",
+                "Eliminación de impurezas",
+                "Tratamiento personalizado",
+                "Mejora la textura de la piel"
+            ],
+            "duration": "60 minutos",
+            "sessions": "1 sesión cada 1-2 meses",
+            "mainImage": "mujer3AtendiendoseCara.png",
+            "galleryImages": [
+                "Hombre1AtendiendoseCara.png",
+                "Mujer2AtendiendoseCara.png",
+                "mujer3AtendiendoseCara.png",
+                "mujer4AtendiendoseCara.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/limpieza-cutis"
+        },
+        {
+            "id": "lifting-pestanas",
+            "name": "Lifting de Pestañas",
+            "shortDescription": "Realza tu mirada con lifting y tinte profesional",
+            "fullDescription": "Tratamiento que eleva y curva las pestañas naturales, incluyendo tinte para un resultado más dramático y duradero.",
+            "benefits": [
+                "Pestañas más largas y curvadas",
+                "Efecto natural",
+                "Resultados duraderos",
+                "Sin mantenimiento diario"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "1 sesión cada 6-8 semanas",
+            "mainImage": "Mujer1Pestaña.png",
+            "galleryImages": [
+                "Mujer2Pestaña.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/lifting-de-pestanas"
+        },
+        {
+            "id": "belleza-pies-manos",
+            "name": "Belleza de Pies y Manos",
+            "shortDescription": "Cuidados completos para manos y pies",
+            "fullDescription": "Tratamientos especializados que incluyen manicura, pedicura, exfoliación y masajes para el cuidado integral de manos y pies.",
+            "benefits": [
+                "Cuidado profesional",
+                "Hidratación profunda",
+                "Tratamiento completo",
+                "Resultados inmediatos"
+            ],
+            "duration": "60-90 minutos",
+            "sessions": "Según necesidad",
+            "mainImage": "BellezaPiesManos.png",
+            "galleryImages": [
+                "BellezaManosPies2.png"
+                
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/belleza-manos-y-pies"
+        },
+        {
+            "id": "body-vela",
+            "name": "Body-Vela Slim",
+            "shortDescription": "Modelado corporal y reducción de celulitis",
+            "fullDescription": "Tratamiento avanzado que combina tecnología de vacumterapia y luz infrarroja para modelar el cuerpo y reducir la celulitis.",
+            "benefits": [
+                "Reducción de celulitis",
+                "Modelado corporal",
+                "Mejora la circulación",
+                "Resultados visibles"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "8-12 sesiones",
+            "mainImage": "MujerVelaSlim.png",
+            "galleryImages": [
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/body-vela"
+        },
+        {
+            "id": "depilacion-laser",
+            "name": "Depilación Láser",
+            "shortDescription": "Eliminación permanente del vello con tecnología láser",
+            "fullDescription": "La Depilación Láser es un tratamiento seguro y efectivo que elimina el vello de forma permanente, sin dañar la piel. Utilizamos tecnología de última generación para resultados duraderos.",
+            "benefits": [
+                "Eliminación permanente del vello",
+                "Tratamiento seguro y efectivo",
+                "Resultados duraderos",
+                "Sin dañar la piel"
+            ],
+            "duration": "Depende de la zona",
+            "sessions": "6-8 sesiones",
+            "mainImage": "Mujer1DepilacionDefPiernas.png",
+            "galleryImages": [
+                "Hombre1DepliacionDef.png",
+                "Mujer2DepilacionDefAxi.png",
+                "MujerDepilacionDef.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/depilacion-laser"
+        },
+        {
+            "id": "nutricion",
+            "name": "Nutrición",
+            "shortDescription": "Asesoramiento nutricional personalizado",
+            "fullDescription": "Plan de alimentación personalizado con seguimiento profesional para alcanzar tus objetivos de salud y bienestar.",
+            "benefits": [
+                "Plan personalizado",
+                "Seguimiento continuo",
+                "Educación nutricional",
+                "Objetivos realistas"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "Consulta mensual",
+            "mainImage": "Nutricionista.png",
+            "galleryImages": [
+
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/nutricion"
+        },
+        {
+            "id": "criolipolisis",
+            "name": "Criolipólisis",
+            "shortDescription": "Eliminación definitiva de grasa mediante congelamiento",
+            "fullDescription": "La Criolipólisis es un tratamiento no invasivo que elimina las células grasas mediante tecnología de congelamiento localizado, logrando resultados permanentes.",
+            "benefits": [
+                "Eliminación permanente de grasa",
+                "No invasivo",
+                "Sin tiempo de recuperación",
+                "Resultados visibles"
+            ],
+            "duration": "60-90 minutos",
+            "sessions": "2-4 sesiones",
+            "mainImage": "Mujer1Criolipolisis.png",
+            "galleryImages": [
+                "Mujer2Criolipolisis.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/criolipolisis"
+        }, 
+        {
+            "id": "facial",
+            "name": "Tratamientos Faciales",
+            "shortDescription": "Rejuvenecimiento facial, limpieza profunda y tratamientos anti-edad",
+            "fullDescription": "Nuestros tratamientos faciales personalizados combinan técnicas avanzadas de limpieza, exfoliación y nutrición para lograr una piel radiante y saludable. Incluye diagnóstico personalizado y recomendaciones específicas para tu tipo de piel.",
+            "benefits": [
+                "Limpieza profunda personalizada",
+                "Rejuvenecimiento visible",
+                "Tratamiento anti-edad",
+                "Mejora la textura de la piel"
+            ],
+            "duration": "60-75 minutos",
+            "sessions": "1 sesión cada 3-4 semanas",
+            "mainImage": "mujer4AtendiendoseCara.png",
+            "galleryImages": [
+                "mujer3AtendiendoseCara",
+                "mujer4AtendiendoseCara"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/facial"
+        },
+        {
+            "id": "masajes",
+            "name": "Masajes Corporales",
+            "shortDescription": "Relax y bienestar para tu cuerpo con masajes terapéuticos y relajantes",
+            "fullDescription": "Diferentes técnicas de masajes terapéuticos y relajantes para aliviar tensiones y mejorar tu bienestar general.",
+            "benefits": [
+                "Reduce el estrés",
+                "Alivia dolores musculares",
+                "Mejora la circulación",
+                "Bienestar general"
+            ],
+            "duration": "60-90 minutos",
+            "sessions": "Según necesidad",
+            "mainImage": "HombreMasajeCorporal.png",
+            "galleryImages": [
+                "MujerMasajeCorporal.png"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/masajes"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+# Default configuration for all web crawlers
+User-agent: *
+
+# Allow crawling of all content
+Allow: /
+
+# Prevent crawling of specific directories
+Disallow: /node_modules/
+Disallow: /assets/admin/
+Disallow: /temp/
+Disallow: /css/*.css$
+Disallow: /*.json$
+
+# Rate limiting
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.marestetica.com/sitemap.xml

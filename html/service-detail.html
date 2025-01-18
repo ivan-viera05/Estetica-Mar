@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Cache-Control en meta tags -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" href="../css/style.css" as="style">
+    
+    <!-- SEO Meta Tags -->
+    <title>Servicio - Mar Estética</title>
+    <meta name="description" content="Descubre nuestros tratamientos especializados en Mar Estética. Tecnología avanzada y profesionales certificados para tu bienestar.">
+    <meta name="keywords" content="tratamientos estéticos, belleza, spa, tratamientos faciales, tratamientos corporales">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.marestetica.com/servicios/">
+    <meta property="og:title" content="Servicios - Mar Estética">
+    <meta property="og:description" content="Tratamientos personalizados con tecnología de vanguardia">
+    <meta property="og:image" content="../assets/img/logoMarEstetica-Photoroom.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/iconoMarEstetica-Photoroom.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    
+    <!-- CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="container">
+            <div class="cookie-content">
+                <p>Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra 
+                    <a href="#" class="cookie-policy">política de cookies</a>.
+                </p>
+                <div class="cookie-buttons">
+                    <button id="acceptCookies" class="btn btn-primary">Aceptar</button>
+                    <button id="rejectCookies" class="btn btn-outline-light">Rechazar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/img/logoMarEstetica-Photoroom.png" alt="Mar Estética">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Detail Section -->
+    <section id="service-detail" class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-image-container">
+                        <img id="serviceMainImage" src="" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 id="serviceName" class="mb-4"></h1>
+                    <p id="serviceDescription" class="lead mb-4"></p>
+                    
+                    <div class="benefits-section mb-4">
+                        <h3>Beneficios</h3>
+                        <ul id="serviceBenefits" class="list-unstyled">
+                            <!-- Benefits will be inserted here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="details-section mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Duración</h4>
+                                <p id="serviceDuration"></p>
+                            </div>
+                            <div class="col-6">
+                                <h4>Sesiones</h4>
+                                <p id="serviceSessions"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg" onclick="openServiceCalendly()">
+                        Reservar Cita
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Gallery Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">Galería</h3>
+                    <div id="serviceGallery" class="row g-4">
+                        <!-- Gallery images will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <!-- Tu footer existente -->
+    </footer>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/service-detail.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>

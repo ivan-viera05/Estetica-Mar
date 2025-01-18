@@ -1,0 +1,129 @@
+/* Legal Page Specific Styles */
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.legal-section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.legal-section:nth-child(2) { animation-delay: 0.2s; }
+.legal-section:nth-child(3) { animation-delay: 0.4s; }
+.legal-section:nth-child(4) { animation-delay: 0.6s; }
+
+.legal-title {
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.legal-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #680747, #a83b79);
+}
+
+.section-header {
+    border-bottom: 2px solid #680747;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    color: #2c2c2c;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(104, 7, 71, 0.1);
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    background-color: rgba(104, 7, 71, 0.1);
+    border-left: 4px solid #680747;
+}
+
+.bi {
+    color: #680747;
+    margin-right: 0.5rem;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer {
+        display: none;
+    }
+
+    .legal-content {
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .list-group-item {
+        page-break-inside: avoid;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 1rem;
+    }
+
+    .legal-title {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
