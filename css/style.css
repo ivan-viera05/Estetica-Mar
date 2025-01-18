@@ -1,6 +1,29 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+/* Remove imports since we're using CDN */
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
+/* @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"; */
 
+/* Add namespace to increase specificity */
+body.mar-estetica {
+    /* Your styles */
+}
+
+/* Use more specific selectors */
+.mar-estetica .navbar {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mar-estetica .btn-primary {
+    background-color: #680747 !important;
+    border-color: #680747 !important;
+}
+
+/* Keep your custom styles more specific */
+.mar-estetica .service-card {
+    border: none !important;
+    /* other styles */
+}
 
 /* Estilos para el navbar y logo */
 .navbar {
