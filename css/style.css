@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     position: relative;
     overflow: hidden;
-    background: url('../assets/img/MujerParaBackGround.png') no-repeat center center;
+    background: url('../assets/img/MujerParaBackGround.webp') no-repeat center center;
     background-size: cover;
     position: relative;
 }

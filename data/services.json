@@ -13,10 +13,10 @@
             ],
             "duration": "60-90 minutos",
             "sessions": "1-2 sesiones por año",
-            "mainImage": "Mujer1Hifu.png",
+            "mainImage": "Mujer1Hifu.webp",
             "galleryImages": [
-                "Hombre1Hifu.png",
-                "hifu-treatment.png"
+                "Hombre1Hifu.webp",
+                "hifu-treatment.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/hifu"
@@ -34,9 +34,9 @@
             ],
             "duration": "45-60 minutos",
             "sessions": "6-8 sesiones",
-            "mainImage": "MujerCriofraxis.png",
+            "mainImage": "MujerCriofraxis.webp",
             "galleryImages": [
-                "Mujer2Criofraxis.png"
+                "Mujer2Criofraxis.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/criofraxis"
@@ -54,12 +54,12 @@
             ],
             "duration": "60 minutos",
             "sessions": "1 sesión cada 1-2 meses",
-            "mainImage": "mujer3AtendiendoseCara.png",
+            "mainImage": "mujer3AtendiendoseCara.webp",
             "galleryImages": [
-                "Hombre1AtendiendoseCara.png",
-                "Mujer2AtendiendoseCara.png",
-                "mujer3AtendiendoseCara.png",
-                "mujer4AtendiendoseCara.png"
+                "Hombre1AtendiendoseCara.webp",
+                "Mujer2AtendiendoseCara.webp",
+                "mujer3AtendiendoseCara.webp",
+                "mujer4AtendiendoseCara.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/limpieza-cutis"
@@ -77,9 +77,9 @@
             ],
             "duration": "45-60 minutos",
             "sessions": "1 sesión cada 6-8 semanas",
-            "mainImage": "Mujer1Pestaña.png",
+            "mainImage": "Mujer1Pestaña.webp",
             "galleryImages": [
-                "Mujer2Pestaña.png"
+                "Mujer2Pestaña.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/lifting-de-pestanas"
@@ -97,9 +97,9 @@
             ],
             "duration": "60-90 minutos",
             "sessions": "Según necesidad",
-            "mainImage": "BellezaPiesManos.png",
+            "mainImage": "BellezaPiesManos.webp",
             "galleryImages": [
-                "BellezaManosPies2.png"
+                "BellezaManosPies2.webp"
                 
             ],
             "price": "Consultar",
@@ -118,7 +118,7 @@
             ],
             "duration": "45-60 minutos",
             "sessions": "8-12 sesiones",
-            "mainImage": "MujerVelaSlim.png",
+            "mainImage": "MujerVelaSlim.webp",
             "galleryImages": [
             ],
             "price": "Consultar",
@@ -137,11 +137,11 @@
             ],
             "duration": "Depende de la zona",
             "sessions": "6-8 sesiones",
-            "mainImage": "Mujer1DepilacionDefPiernas.png",
+            "mainImage": "Mujer1DepilacionDefPiernas.webp",
             "galleryImages": [
-                "Hombre1DepliacionDef.png",
-                "Mujer2DepilacionDefAxi.png",
-                "MujerDepilacionDef.png"
+                "Hombre1DepliacionDef.webp",
+                "Mujer2DepilacionDefAxi.webp",
+                "MujerDepilacionDef.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/depilacion-laser"
@@ -159,7 +159,7 @@
             ],
             "duration": "45-60 minutos",
             "sessions": "Consulta mensual",
-            "mainImage": "Nutricionista.png",
+            "mainImage": "Nutricionista.webp",
             "galleryImages": [
 
             ],
@@ -179,9 +179,9 @@
             ],
             "duration": "60-90 minutos",
             "sessions": "2-4 sesiones",
-            "mainImage": "Mujer1Criolipolisis.png",
+            "mainImage": "Mujer1Criolipolisis.webp",
             "galleryImages": [
-                "Mujer2Criolipolisis.png"
+                "Mujer2Criolipolisis.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/criolipolisis"
@@ -199,10 +199,10 @@
             ],
             "duration": "60-75 minutos",
             "sessions": "1 sesión cada 3-4 semanas",
-            "mainImage": "mujer4AtendiendoseCara.png",
+            "mainImage": "mujer4AtendiendoseCara.webp",
             "galleryImages": [
-                "mujer3AtendiendoseCara",
-                "mujer4AtendiendoseCara"
+                "mujer3AtendiendoseCara.webp",
+                "mujer4AtendiendoseCara.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/facial"
@@ -220,9 +220,9 @@
             ],
             "duration": "60-90 minutos",
             "sessions": "Según necesidad",
-            "mainImage": "HombreMasajeCorporal.png",
+            "mainImage": "HombreMasajeCorporal.webp",
             "galleryImages": [
-                "MujerMasajeCorporal.png"
+                "MujerMasajeCorporal.webp"
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/masajes"
