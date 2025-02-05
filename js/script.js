@@ -49,11 +49,52 @@ function getCookie(name) {
     return null;
 }
 
+// Feature detection for WebP support
+async function supportsWebp() {
+    if (!self.createImageBitmap) return false;
+    
+    const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+    const blob = await fetch(webpData).then(r => r.blob());
+    
+    return createImageBitmap(blob).then(() => true, () => false);
+}
+
+// Function to update image sources based on browser support
+async function initializeImageSupport() {
+    const supportsWebP = await supportsWebp();
+    
+    if (!supportsWebP) {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            // Replace WebP with PNG in src and srcset
+            if (img.src.endsWith('.webp')) {
+                img.src = img.src.replace('.webp', '.png');
+            }
+            if (img.srcset) {
+                img.srcset = img.srcset.split(',')
+                    .map(src => src.replace('.webp', '.png'))
+                    .join(',');
+            }
+        });
+
+        // Update background images in CSS
+        const elementsWithBgImage = document.querySelectorAll('[class*="hero"], [class*="background"]');
+        elementsWithBgImage.forEach(el => {
+            const style = window.getComputedStyle(el);
+            const bgImage = style.backgroundImage;
+            if (bgImage.includes('.webp')) {
+                el.style.backgroundImage = bgImage.replace('.webp', '.png');
+            }
+        });
+    }
+}
+
 // Función para cachear las imágenes más usadas
-function cacheImages() {
+async function cacheImages() {
+    const imageExt = await supportsWebp() ? '.webp' : '.png';
     const imagesToCache = [
-        'assets/img/logoMarEstetica-Photoroom.png',
-        'assets/img/MujerParaBackGround.png',
+        `assets/img/logoMarEstetica-Photoroom${imageExt}`,
+        `assets/img/MujerParaBackGround${imageExt}`,
         // Agrega aquí las imágenes más importantes
     ];
 
@@ -79,7 +120,10 @@ function cachePageData() {
     setCookie('pageData', JSON.stringify(pageData), 7);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    // Initialize image format support
+    await initializeImageSupport();
+    
     // Iniciar caché de imágenes
     cacheImages();
     
@@ -327,3 +371,13 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+
+// Update image sources in dynamically loaded content
+const updateDynamicImages = (container) => {
+    if (!supportsWebp()) {
+        const images = container.querySelectorAll('img[src$=".webp"]');
+        images.forEach(img => {
+            img.src = img.src.replace('.webp', '.png');
+        });
+    }
+};
