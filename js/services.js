@@ -3,7 +3,7 @@ const WHATSAPP_NUMBER = "54911550246";
 
 // Define host numbers mapping
 const hostNumbers = {
-  "Ivan Viera": "5491159891620",
+  "Ivan Viera": "5491155024690",
   "Ana García": "5491123456789", 
   "Carlos López": "5491134567890"
 };
@@ -81,28 +81,117 @@ function formatDateTime(isoString) {
         return 'fecha no disponible';
     }
 }
+async function fetchCalendlyData(url) {
+    try {
+        const response = await fetch(url, {
+            headers: {
+                "Authorization": "Bearer eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzM4Njk2NTI3LCJqdGkiOiI2N2ZhYTU2NC02ZjUwLTRkMmUtOWZkZi0yNmQ5ZmM1MGJjOTgiLCJ1c2VyX3V1aWQiOiJmZjY3YjdmMC0wNjA1LTQ3NDUtOGE0Ni1iMzA5Mzk1YzQzZGQifQ.N125wmMFENlzvEljMuVcHprIT9O3ThZ4XBams-V0uA2mJxw5X9ljUsYrTVs1cv4bJWCww7w8TUnjQ04M6zaUzw",
+                "Content-Type": "application/json"
+            }
+        });
+        return await response.json();
+    } catch (error) {
+        console.error("❌ Error obteniendo datos de Calendly:", error);
+        return null;
+    }
+}
 
-// Updated Calendly event handler
-function handleCalendlyEvent(e) {
+function formatWhatsAppMessage(data) {
+    return encodeURIComponent(
+        `¡Hola ${data.invitado}! 👋\n\n` +
+        `Tu cita para *${data.evento}* ha sido confirmada para:\n` +
+        `📅 ${data.fecha}\n\n` +
+        `Tu anfitrión será: ${data.anfitrión}\n` +
+        `📞 ${data.teléfono_anfitrión}\n\n` +
+        `Por favor, confirma que recibiste este mensaje.\n` +
+        `¡Gracias por elegir nuestros servicios! ✨`
+    );
+}
+
+function openWhatsApp(phoneNumber, message) {
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappURL, '_blank');
+}
+
+async function handleCalendlyEvent(e) {
     if (e.data.event && e.data.event === "calendly.event_scheduled") {
         try {
+            console.log("📌 Evento recibido de Calendly:", e.data);
+
+            // Obtener las URIs del evento y del invitado
+            const eventUri = e.data.payload.event.uri;
+            const inviteeUri = e.data.payload.invitee.uri;
+
+            if (!eventUri || !inviteeUri) {
+                console.error("❌ No se encontraron URIs del evento o del invitado.");
+                return;
+            }
+
+            // Obtener los detalles completos del evento
+            const eventData = await fetchCalendlyData(eventUri);
+            const inviteeData = await fetchCalendlyData(inviteeUri);
+
+            if (!eventData || !inviteeData) {
+                console.error("❌ No se pudieron obtener los detalles del evento o del invitado.");
+                return;
+            }
+
+            // Extraer información del evento
+            const eventTitle = eventData.resource?.name || "Evento sin nombre";
+            const scheduledTime = eventData.resource?.start_time ? formatDateTime(eventData.resource.start_time) : "Fecha no disponible";
+
+            // Extraer información del invitado
+            const inviteeName = inviteeData.resource?.name || "Nombre no disponible";
+            const inviteeEmail = inviteeData.resource?.email || "Correo no disponible";
+            const inviteePhone = inviteeData.resource?.questions_and_answers?.find(q => q.question.toLowerCase().includes("teléfono"))?.answer || "Número no proporcionado";
+
+            // Obtener información del anfitrión
             const host = getHostInfo(e);
-            const startTime = e.data.payload.event.start_time;
-            const scheduledTime = formatDateTime(startTime);
-            
-            console.log('Scheduled event:', {
-                host: host.name,
-                time: scheduledTime,
-                rawTime: startTime
+
+            console.log("✅ Datos procesados correctamente:", {
+                anfitrión: host.name,
+                teléfono_anfitrión: host.phone,
+                evento: eventTitle,
+                fecha: scheduledTime,
+                invitado: inviteeName,
+                email: inviteeEmail,
+                teléfono_invitado: inviteePhone
             });
-            
-            const message = `¡Hola ${host.name}! He agendado una cita en Mar Estética para el ${scheduledTime}. ¡Gracias por la confirmación!`;
-            const whatsappURL = `https://api.whatsapp.com/send?phone=${host.phone}&text=${encodeURIComponent(message)}`;
-            
-            window.open(whatsappURL, '_blank');
+
+            // Crear el mensaje para WhatsApp del anfitrión
+            const hostMessage = 
+                `🔔 *Nueva Cita Agendada* 🔔\n\n` +
+                `👤 Cliente: ${inviteeName}\n` +
+                `📅 Fecha: ${scheduledTime}\n` +
+                `💆 Servicio: ${eventTitle}\n\n` +
+                `📧 Contacto del cliente:\n` +
+                `• Email: ${inviteeEmail}\n` +
+                `📍 Lugar: Mar Estética\n` +
+                `✨ ¡No olvides confirmar la cita!`;
+
+            const hostWhatsappURL = `https://api.whatsapp.com/send?phone=${host.phone}&text=${encodeURIComponent(hostMessage)}`;
+
+            // Abrir WhatsApp con el mensaje para el anfitrión
+            window.open(hostWhatsappURL, "_blank");
+
+            // Preparar datos para el mensaje al cliente
+            const clientMessageData = {
+                evento: eventTitle,
+                fecha: scheduledTime,
+                invitado: inviteeName,
+                anfitrión: host.name,
+                teléfono_anfitrión: host.phone
+            };
+
+            // Format phone number (remove spaces, add country code if needed)
+            const phoneNumber = inviteePhone.replace(/\D/g, '');
+            if (phoneNumber) {
+                const clientMessage = formatWhatsAppMessage(clientMessageData);
+                openWhatsApp(phoneNumber, clientMessage);
+            }
+
         } catch (error) {
-            console.error('Error processing Calendly event:', error);
-            console.log('Event payload:', e.data.payload);
+            console.error("❌ Error al procesar el evento de Calendly:", error);
         }
     }
 }
