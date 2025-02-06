@@ -167,7 +167,8 @@
 
     <!-- Services Section -->
     <section id="services" class="py-5 bg-light">
-        <div class="container">
+    <div class="container-fluid">
+        <div class="container-fluid">
             <h2 class="text-center section-title mb-5">Nuestros Servicios</h2>
             
             <!-- Services Categories -->
@@ -186,36 +187,37 @@
             </div>
 
             <!-- Services Content -->
-            <div class="tab-content" id="services-content">
+            <div class="tab-content container-fluid px-0" id="services-content">
                 <!-- Facial Services -->
-                <div class="tab-pane fade show active" id="facial">
-                    <div class="services-grid">
-                        <div class="row g-4">
+                <div class="tab-pane fade show active w-100" id="facial">
+                    <div class="services-grid w-100">
+                        <div class="row g-4 justify-content-center">
                             <!-- Services will be loaded here -->
                         </div>
                     </div>
                 </div>
 
                 <!-- Corporal Services -->
-                <div class="tab-pane fade" id="corporal">
-                    <div class="services-grid">
-                        <div class="row g-4">
+                <div class="tab-pane fade w-100" id="corporal">
+                    <div class="services-grid w-100">
+                        <div class="row g-4 justify-content-center">
                             <!-- Services will be loaded here -->
                         </div>
                     </div>
                 </div>
 
                 <!-- Bienestar Services -->
-                <div class="tab-pane fade" id="bienestar">
-                    <div class="services-grid">
-                        <div class="row g-4">
+                <div class="tab-pane fade w-100" id="bienestar">
+                    <div class="services-grid w-100">
+                        <div class="row g-4 justify-content-center">
                             <!-- Services will be loaded here -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Appointment Section -->
     <section id="appointment" class="py-5 bg-light">
@@ -226,56 +228,50 @@
                     <div class="service-selector text-center">
                         <h4 class="mb-4">Selecciona el servicio</h4>
                         <div class="row g-3">
-                            <!-- Each button in a responsive column -->
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('depilacion-laser')">
-                                    Depilación Láser
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('hifu')">
-                                    HIFU
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('limpieza-cutis')">
-                                    Limpieza de Cutis
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('criofraxis')">
-                                    Criofraxis
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('lifting-pestanas')">
-                                    Lifting de Pestañas
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('body-vela')">
-                                    Body - Vela
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('belleza-pies-manos')">
-                                    Belleza de Manos y Pies
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                <button type="button" class="btn btn-outline-primary w-100"
-                                    onclick="openCalendly('bronceado')">
-                                    Bronceado Saludable
-                                </button>
-                            </div>
-                        </div>
+    <!-- Each button in a responsive column -->
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center" 
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('depilacion-laser')">
+        <span>Depilación Láser</span>
+    </button>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center"
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('hifu')">
+        <span>HIFU</span>
+    </button>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center"
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('limpieza-cutis')">
+        <span>Limpieza de Cutis</span>
+    </button>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center" 
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('criofraxis')">
+        <span>Criofraxis</span>
+    </button>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center"
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('lifting-pestanas')">
+        <span>Lifting de Pestañas</span>
+    </button>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center"
+            style="height: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+            onclick="openCalendly('body-vela')">
+        <span>Body - Vela</span>
+    </button>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -359,91 +355,7 @@
     </div>
 </section>
 
-    <!-- Gallery Section 
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title mb-5">Nuestra Galería</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/mujer4AtendiendoseCara.png" 
-                             alt="Tratamiento Facial" 
-                             class="img-fluid"
-                             loading="lazy"
-                             width="400"
-                             height="300">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Tratamientos Faciales</h4>
-                                <p>Rejuvenecimiento y cuidado de la piel</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/Mujer1Hifu.png"  loading="lazy"
-                        decoding="async" alt="HIFU" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>HIFU</h4>
-                                <p>Tecnología de última generación</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/MujerCriofraxis.png"  loading="lazy"
-                        decoding="async" alt="Criofraxis" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Criofraxis</h4>
-                                <p>Tratamientos reductores efectivos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/Mujer1Pestaña.png"  loading="lazy"
-                        decoding="async" alt="Lifting de Pestañas" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Lifting de Pestañas</h4>
-                                <p>Realza tu mirada naturalmente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/BellezaPiesManos.png"  loading="lazy"
-                        decoding="async" alt="Belleza de Manos y Pies" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Belleza de Pies y Manos</h4>
-                                <p>Cuidados especializados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="assets/img/MujerVelaSlim.png"  loading="lazy"
-                        decoding="async" alt="Body-Vela Slim" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Body-Vela Slim</h4>
-                                <p>Modelado corporal avanzado</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
+  
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-5">
         <div class="container">

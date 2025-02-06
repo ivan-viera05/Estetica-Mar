@@ -10,38 +10,44 @@ const hostNumbers = {
 
 // Function to get host info from Calendly event
 function getHostInfo(event) {
-  // Extract host name from Calendly event data
-  const hostName = event.data.payload?.invitee?.full_name || "Ivan Viera"; // Default to Ivan if no name found
-  return {
-    name: hostName,
-    phone: hostNumbers[hostName] || hostNumbers["Ivan Viera"] // Default to Ivan's number if host not found
-  };
+    const hostName = event.data.payload?.event?.organizer?.name || "Ivan Viera";
+    return {
+        name: hostName,
+        phone: hostNumbers[hostName] || hostNumbers["Ivan Viera"]
+    };
 }
 
 // Function to create service card HTML
 function createServiceCard(service, isFeatured = false) {
     return `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="service-card h-100">
-                <div class="service-image">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
                     <img src="assets/img/${service.mainImage}" 
                          alt="${service.name}" 
-                         class="img-fluid container-fluid" 
+                         class="card-img-top"
+                         style="height: 200px; object-fit: cover;"
                          loading="lazy">
                 </div>
-                <div class="card-body d-flex flex-column py-3">
-                    <h3 class="card-title h5 mb-2">${service.name}</h3>
-                    <p class="card-text small mb-3">${service.shortDescription}</p>
-                    <div class="service-tags mb-2">
-                        ${service.benefits.slice(0, 2).map(benefit => 
-                            `<span class="tag">${benefit}</span>`
-                        ).join('')}
+                <div class="card-body d-flex flex-column">
+                    <div class="flex-grow-1">
+                        <h3 class="card-title h5 text-truncate">${service.name}</h3>
+                        <p class="card-text text-muted small" style="min-height: 48px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                            ${service.shortDescription}
+                        </p>
+                        
+                        <div class="">
+                            ${service.benefits.slice(0, 2).map(benefit => 
+                                `<span class="badge bg-primary bg-opacity-10 text-light me-2 mb-1 text-truncate">${benefit}</span>`
+                            ).join('')}
+                        </div>
                     </div>
-                    <div class="mt-auto">
+                    
+                    <div class="">
                         <div class="d-flex gap-2">
                             <a href="html/service-detail.html?id=${service.id}" 
-                               class="btn btn-outline-primary btn-sm flex-grow-1">Ver más</a>
-                            <button class="btn btn-primary btn-sm" 
+                               class="btn btn-outline-primary flex-fill text-nowrap">Ver más</a>
+                            <button class="btn btn-primary flex-fill text-nowrap" 
                                     onclick="openCalendly('${service.id}')">
                                 Reservar
                             </button>
@@ -53,16 +59,51 @@ function createServiceCard(service, isFeatured = false) {
     `;
 }
 
-// Updated function to handle Calendly events
+// Enhanced date formatting function
+function formatDateTime(isoString) {
+    try {
+        if (!isoString) return 'fecha no disponible';
+        
+        const date = new Date(isoString);
+        if (isNaN(date.getTime())) return 'fecha no válida';
+        
+        return date.toLocaleString('es-AR', {
+            weekday: 'long',
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+    } catch (error) {
+        console.error('Error formatting date:', error);
+        return 'fecha no disponible';
+    }
+}
+
+// Updated Calendly event handler
 function handleCalendlyEvent(e) {
     if (e.data.event && e.data.event === "calendly.event_scheduled") {
-        const host = getHostInfo(e);
-        const message = `¡Hola ${host.name}! He agendado una cita en Mar Estética. ¡Gracias por la confirmación!`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/${host.phone}?text=${encodedMessage}`;
-        
-        // Open WhatsApp in a new tab
-        window.open(whatsappURL, '_blank');
+        try {
+            const host = getHostInfo(e);
+            const startTime = e.data.payload.event.start_time;
+            const scheduledTime = formatDateTime(startTime);
+            
+            console.log('Scheduled event:', {
+                host: host.name,
+                time: scheduledTime,
+                rawTime: startTime
+            });
+            
+            const message = `¡Hola ${host.name}! He agendado una cita en Mar Estética para el ${scheduledTime}. ¡Gracias por la confirmación!`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${host.phone}&text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappURL, '_blank');
+        } catch (error) {
+            console.error('Error processing Calendly event:', error);
+            console.log('Event payload:', e.data.payload);
+        }
     }
 }
 
