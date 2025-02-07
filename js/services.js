@@ -213,19 +213,31 @@ function categorizeServices(services) {
     }, { facial: [], corporal: [], bienestar: [] });
 }
 
-// Function to render services
+// Modificar la función renderServices
 async function renderServices() {
     try {
-        const response = await fetch('data/services.json');
+        // Agregar console.log para debugging
+        console.log('🔄 Cargando servicios...');
+        
+        const response = await fetch('/data/services.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const data = await response.json();
+        console.log('✅ Servicios cargados:', data);
         
         // Categorize services
         const categorizedServices = categorizeServices(data.services);
+        console.log('📑 Servicios categorizados:', categorizedServices);
         
         // Render each category
         Object.entries(categorizedServices).forEach(([category, services]) => {
             const container = document.querySelector(`#${category} .row`);
-            if (!container) return;
+            if (!container) {
+                console.warn(`⚠️ No se encontró el contenedor para la categoría: ${category}`);
+                return;
+            }
             
             // Clear existing content
             container.innerHTML = '';
@@ -234,10 +246,12 @@ async function renderServices() {
             services.forEach(service => {
                 container.innerHTML += createServiceCard(service);
             });
+            
+            console.log(`✅ Categoría ${category} renderizada con ${services.length} servicios`);
         });
         
     } catch (error) {
-        console.error('Error loading services:', error);
+        console.error('❌ Error loading services:', error);
     }
 }
 
