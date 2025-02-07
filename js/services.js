@@ -43,7 +43,7 @@ function createServiceCard(service, isFeatured = false) {
                         </div>
                     </div>
                     
-                    <div class="d-grid gap-2">
+                    <div class="d-grid gap-2  d-flex">
                         <a href="html/service-detail.html?id=${service.id}" 
                            class="btn btn-outline-primary">
                             Ver más
