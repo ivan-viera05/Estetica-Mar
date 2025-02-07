@@ -216,7 +216,6 @@ function categorizeServices(services) {
 // Modificar la función renderServices
 async function renderServices() {
     try {
-        // Agregar console.log para debugging
         console.log('🔄 Cargando servicios...');
         
         const response = await fetch('/data/services.json');
@@ -227,11 +226,13 @@ async function renderServices() {
         const data = await response.json();
         console.log('✅ Servicios cargados:', data);
         
-        // Categorize services
+        if (!data || !data.services || !Array.isArray(data.services)) {
+            throw new Error('Formato de datos inválido');
+        }
+        
         const categorizedServices = categorizeServices(data.services);
         console.log('📑 Servicios categorizados:', categorizedServices);
         
-        // Render each category
         Object.entries(categorizedServices).forEach(([category, services]) => {
             const container = document.querySelector(`#${category} .row`);
             if (!container) {
@@ -239,10 +240,7 @@ async function renderServices() {
                 return;
             }
             
-            // Clear existing content
             container.innerHTML = '';
-            
-            // Add services to container
             services.forEach(service => {
                 container.innerHTML += createServiceCard(service);
             });
@@ -252,6 +250,16 @@ async function renderServices() {
         
     } catch (error) {
         console.error('❌ Error loading services:', error);
+        // Mostrar mensaje de error al usuario
+        document.querySelectorAll('#services .row').forEach(container => {
+            container.innerHTML = `
+                <div class="col-12 text-center">
+                    <div class="alert alert-danger">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Error cargando servicios. Por favor, inténtalo de nuevo más tarde.
+                    </div>
+                </div>
+            `;
+        });
     }
 }
 
