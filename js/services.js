@@ -77,12 +77,7 @@ function formatDateTime(isoString) {
 }
 async function fetchCalendlyData(url) {
     try {
-        const response = await fetch(url, {
-            headers: {
-                "Authorization": "Bearer eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzM4Njk2NTI3LCJqdGkiOiI2N2ZhYTU2NC02ZjUwLTRkMmUtOWZkZi0yNmQ5ZmM1MGJjOTgiLCJ1c2VyX3V1aWQiOiJmZjY3YjdmMC0wNjA1LTQ3NDUtOGE0Ni1iMzA5Mzk1YzQzZGQifQ.N125wmMFENlzvEljMuVcHprIT9O3ThZ4XBams-V0uA2mJxw5X9ljUsYrTVs1cv4bJWCww7w8TUnjQ04M6zaUzw",
-                "Content-Type": "application/json"
-            }
-        });
+        const response = await fetch(`/api/calendly-data?url=${encodeURIComponent(url)}`);
         return await response.json();
     } catch (error) {
         console.error("❌ Error obteniendo datos de Calendly:", error);
