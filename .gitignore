@@ -1,8 +1,26 @@
 # Dependencies
 node_modules/
 .DS_Store
+
+# Environment variables
 .env
 .env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
 .cache
 dist/
 token.env
+.vercel

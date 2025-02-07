@@ -43,10 +43,16 @@ function createServiceCard(service, isFeatured = false) {
                         </div>
                     </div>
                     
-                    <button class="btn btn-primary w-100" 
-                            onclick="openCalendly('${service.id}')">
-                        Reservar
-                    </button>
+                    <div class="d-grid gap-2">
+                        <a href="html/service-detail.html?id=${service.id}" 
+                           class="btn btn-outline-primary">
+                            Ver más
+                        </a>
+                        <button class="btn btn-primary" 
+                                onclick="openCalendly('${service.id}')">
+                            Reservar
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
