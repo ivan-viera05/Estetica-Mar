@@ -32,27 +32,21 @@ function createServiceCard(service, isFeatured = false) {
                 <div class="card-body d-flex flex-column">
                     <div class="flex-grow-1">
                         <h3 class="card-title h5 text-truncate">${service.name}</h3>
-                        <p class="card-text text-muted small" style="min-height: 48px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                        <p class="card-text text-muted small">
                             ${service.shortDescription}
                         </p>
                         
-                        <div class="">
+                        <div class="mb-3">
                             ${service.benefits.slice(0, 2).map(benefit => 
-                                `<span class="badge bg-primary bg-opacity-10 text-light me-2 mb-1 text-truncate">${benefit}</span>`
+                                `<span class="badge bg-primary bg-opacity-10 text-light me-2 mb-1">${benefit}</span>`
                             ).join('')}
                         </div>
                     </div>
                     
-                    <div class="">
-                        <div class="d-flex gap-2">
-                            <a href="html/service-detail.html?id=${service.id}" 
-                               class="btn btn-outline-primary flex-fill text-nowrap">Ver más</a>
-                            <button class="btn btn-primary flex-fill text-nowrap" 
-                                    onclick="openCalendly('${service.id}')">
-                                Reservar
-                            </button>
-                        </div>
-                    </div>
+                    <button class="btn btn-primary w-100" 
+                            onclick="openCalendly('${service.id}')">
+                        Reservar
+                    </button>
                 </div>
             </div>
         </div>
@@ -117,6 +111,9 @@ async function handleCalendlyEvent(e) {
     if (e.data.event && e.data.event === "calendly.event_scheduled") {
         try {
             console.log("📌 Evento recibido de Calendly:", e.data);
+            
+            // Obtener información del anfitrión
+            const host = getHostInfo(e); // Añadir esta línea
 
             // Obtener las URIs del evento y del invitado
             const eventUri = e.data.payload.event.uri;
@@ -136,17 +133,16 @@ async function handleCalendlyEvent(e) {
                 return;
             }
 
-            // Extraer información del evento
+            // Extraer información del evento, incluyendo la ubicación
             const eventTitle = eventData.resource?.name || "Evento sin nombre";
             const scheduledTime = eventData.resource?.start_time ? formatDateTime(eventData.resource.start_time) : "Fecha no disponible";
+            const location = eventData.resource?.location?.location || "Mar Estética, Av. Siempre Viva 742"; // Acceder a location.name
+            console.log("Location data:", eventData.resource?.location);
 
             // Extraer información del invitado
             const inviteeName = inviteeData.resource?.name || "Nombre no disponible";
             const inviteeEmail = inviteeData.resource?.email || "Correo no disponible";
             const inviteePhone = inviteeData.resource?.questions_and_answers?.find(q => q.question.toLowerCase().includes("teléfono"))?.answer || "Número no proporcionado";
-
-            // Obtener información del anfitrión
-            const host = getHostInfo(e);
 
             console.log("✅ Datos procesados correctamente:", {
                 anfitrión: host.name,
@@ -155,7 +151,8 @@ async function handleCalendlyEvent(e) {
                 fecha: scheduledTime,
                 invitado: inviteeName,
                 email: inviteeEmail,
-                teléfono_invitado: inviteePhone
+                teléfono_invitado: inviteePhone,
+                ubicación: location // Agregar ubicación a los datos procesados
             });
 
             // Crear el mensaje para WhatsApp del anfitrión
@@ -166,7 +163,7 @@ async function handleCalendlyEvent(e) {
                 `💆 Servicio: ${eventTitle}\n\n` +
                 `📧 Contacto del cliente:\n` +
                 `• Email: ${inviteeEmail}\n` +
-                `📍 Lugar: Mar Estética\n` +
+                `📍 Lugar: ${location}\n` + // Usar la ubicación del evento
                 `✨ ¡No olvides confirmar la cita!`;
 
             const hostWhatsappURL = `https://api.whatsapp.com/send?phone=${host.phone}&text=${encodeURIComponent(hostMessage)}`;

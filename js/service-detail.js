@@ -1,68 +1,61 @@
-// Service Detail Page Logic
+// File: js/service-detail.js
+
 document.addEventListener('DOMContentLoaded', async function() {
-    // Initialize cookie consent
-    initCookieConsent();
-    
-    // Get service ID from URL parameter
+    // Get service ID from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const serviceId = urlParams.get('id');
 
     if (!serviceId) {
-        window.location.href = '/';
+        console.error('No service ID provided');
         return;
     }
 
     try {
-        // Fetch services data
-        const response = await fetch('../data/services.json'); // Cambiado a ruta relativa
+        // Fetch services data from services.json
+        const response = await fetch('../data/services.json');
         const data = await response.json();
         
-        // Find selected service
+        // Find the specific service
         const service = data.services.find(s => s.id === serviceId);
         
         if (!service) {
-            window.location.href = '/';
+            console.error('Service not found');
             return;
         }
 
-        // Update page content with correct image paths
+        // Update the DOM with service details
         document.getElementById('serviceName').textContent = service.name;
-        document.getElementById('serviceDescription').textContent = service.fullDescription;
-        document.getElementById('serviceMainImage').src = `../assets/img/${service.mainImage}`; // Agregado ../
-        document.getElementById('serviceMainImage').alt = service.name;
+        document.getElementById('serviceShortDesc').textContent = service.shortDescription;
+        document.getElementById('serviceFullDesc').textContent = service.fullDescription;
         document.getElementById('serviceDuration').textContent = service.duration;
         document.getElementById('serviceSessions').textContent = service.sessions;
 
-        // Add benefits
+        // Add benefits list
         const benefitsList = document.getElementById('serviceBenefits');
         service.benefits.forEach(benefit => {
             const li = document.createElement('li');
-            li.innerHTML = `<i class="bi bi-check-circle-fill text-primary me-2"></i>${benefit}`;
+            li.textContent = benefit;
             benefitsList.appendChild(li);
         });
 
-        // Add gallery images with correct paths
-        const gallery = document.getElementById('serviceGallery');
-        service.galleryImages.forEach(img => {
-            gallery.innerHTML += `
-                <div class="col-md-6">
-                    <div class="gallery-item">
-                        <img src="../assets/img/${img}" alt="${service.name}" class="img-fluid rounded">
-                    </div>
-                </div>
-            `;
+        // Update main image
+        const serviceImage = document.querySelector('.service-image img');
+        serviceImage.src = `../assets/img/${service.mainImage}`;
+        serviceImage.alt = service.name;
+
+        // Set up action buttons
+        const bookBtn = document.getElementById('serviceBookBtn');
+        bookBtn.addEventListener('click', () => {
+            // Using the Calendly function from script.js
+            openCalendly(service.id);
         });
 
-        // Update page title
-        document.title = `${service.name} - Mar Estética`;
+        const contactBtn = document.getElementById('serviceContactBtn');
+        contactBtn.addEventListener('click', () => {
+            window.location.href = '../index.html#contact';
+        });
 
     } catch (error) {
         console.error('Error loading service details:', error);
     }
 });
-
-function openServiceCalendly() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const serviceId = urlParams.get('id');
-    openCalendly(serviceId);
-}
