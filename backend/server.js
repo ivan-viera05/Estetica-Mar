@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 // Middleware CORS
 app.use((req, res, next) => {
     const allowedOrigins = [
-        'https://estetica-mar.vercel.app', // Agrega tu dominio final de Vercel
+        'https://estetica-mar.vercel.app',
+        'https://estetica-7q7pnpkva-ivan-viera05s-projects.vercel.app', // Nuevo dominio
         'https://estetica-4tv31g5tr-ivan-viera05s-projects.vercel.app',
         'http://localhost:3000'
     ];
