@@ -48,10 +48,7 @@ function createServiceCard(service, isFeatured = false) {
                            class="btn btn-outline-primary">
                             Ver más
                         </a>
-                        <button class="btn btn-primary" 
-                                onclick="openCalendly('${service.id}')">
-                            Reservar
-                        </button>
+                        
                     </div>
                 </div>
             </div>
