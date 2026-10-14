@@ -266,7 +266,20 @@ const CALENDLY_URLS = {
     'lifting-pestanas': 'https://calendly.com/ivanvieraosvaldo/lifting-de-pestanas',
     'body-vela': 'https://calendly.com/ivanvieraosvaldo/body-vela',
     'belleza-pies-manos': 'https://calendly.com/ivanvieraosvaldo/belleza-manos-y-pies',
-    'bronceado': 'https://calendly.com/ivanvieraosvaldo/bronceado-saludable-sol-pleno' 
+    'bronceado': 'https://calendly.com/ivanvieraosvaldo/bronceado-saludable-sol-pleno',
+    'bronceado-saludable': 'https://calendly.com/ivanvieraosvaldo/bronceado-saludable-sol-pleno',
+    'extensiones-pelo-por-pelo': 'https://calendly.com/ivanvieraosvaldo/extensiones-pelo-por-pelo',
+    'body-up': 'https://calendly.com/ivanvieraosvaldo/body-up',
+    'ozono': 'https://calendly.com/ivanvieraosvaldo/ozono',
+    'mascara-led': 'https://calendly.com/ivanvieraosvaldo/mascara-led',
+    'viandas-saludables': 'https://calendly.com/ivanvieraosvaldo/viandas-saludables',
+    'peluqueria': 'https://calendly.com/ivanvieraosvaldo/peluqueria',
+    'plasma': 'https://calendly.com/ivanvieraosvaldo/plasma',
+    'hilos-tensores': 'https://calendly.com/ivanvieraosvaldo/hilos-tensores',
+    'nutricion': 'https://calendly.com/ivanvieraosvaldo/nutricion',
+    'facial': 'https://calendly.com/ivanvieraosvaldo/facial',
+    'masajes': 'https://calendly.com/ivanvieraosvaldo/masajes',
+    'criolipolisis': 'https://calendly.com/ivanvieraosvaldo/criolipolisis'
 };
 
 // Function to open Calendly for specific service

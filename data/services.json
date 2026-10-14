@@ -125,9 +125,9 @@
         },
         {
             "id": "depilacion-laser",
-            "name": "Depilación Láser",
-            "shortDescription": "Eliminación permanente del vello con tecnología láser",
-            "fullDescription": "La Depilación Láser es un tratamiento seguro y efectivo que elimina el vello de forma permanente, sin dañar la piel. Utilizamos tecnología de última generación para resultados duraderos.",
+            "name": "Depilación láser y cera",
+            "shortDescription": "Eliminación efectiva y duradera del vello con tecnología láser y cera descartable",
+            "fullDescription": "Tratamientos de depilación adaptados a tus necesidades: depilación definitiva láser con tecnología de última generación para resultados permanentes y depilación tradicional con cera suave que cuida tu piel.",
             "benefits": [
                 "Eliminación permanente del vello",
                 "Tratamiento seguro y efectivo",
@@ -225,6 +225,176 @@
             ],
             "price": "Consultar",
             "calendlyLink": "https://calendly.com/ivanvieraosvaldo/masajes"
+        },
+        {
+            "id": "bronceado-saludable",
+            "name": "Bronceado saludable Sol Pleno",
+            "shortDescription": "Color dorado uniforme, natural y sin daño solar",
+            "fullDescription": "Sistema de bronceado en spray 100% natural a base de caña de azúcar (DHA), que brinda un tono bronceado perfecto y homogéneo en una sola sesión, protegiendo tu piel.",
+            "benefits": [
+                "Tono dorado natural en minutos",
+                "Sin exposición a rayos UV",
+                "Hidrata y cuida la piel",
+                "Ideal para eventos especiales"
+            ],
+            "duration": "20-30 minutos",
+            "sessions": "1 sesión cada 7-10 días",
+            "mainImage": "bronceado.webp",
+            "galleryImages": [],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/bronceado-saludable-sol-pleno"
+        },
+        {
+            "id": "extensiones-pelo-por-pelo",
+            "name": "Extensiones pelo por pelo",
+            "shortDescription": "Mirada definida con pestañas pelo por pelo personalizadas",
+            "fullDescription": "Aplicación minuciosa de pestañas pelo por pelo de alta calidad, seleccionadas según tu tipo de ojo para lograr mayor volumen, longitud y definición natural.",
+            "benefits": [
+                "Volumen y curvatura a medida",
+                "Mirada impactante sin maquillaje",
+                "Materiales hipoalergénicos",
+                "Efecto duradero"
+            ],
+            "duration": "90-120 minutos",
+            "sessions": "Mantenimiento cada 2-3 semanas",
+            "mainImage": "extensiones-pelo.webp",
+            "galleryImages": [
+                "Mujer1Pestaña.webp"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/extensiones-pelo-por-pelo"
+        },
+        {
+            "id": "body-up",
+            "name": "Body Up",
+            "shortDescription": "Estimulación electromagnética y tonificación muscular profunda",
+            "fullDescription": "Tecnología no invasiva que genera contracciones musculares supramáximas para levantar glúteos, tonificar abdomen y definir piernas en sesiones rápidas y sin dolor.",
+            "benefits": [
+                "Aumento de masa y tono muscular",
+                "Levantamiento y firmeza corporal",
+                "Reduce grasa localizada",
+                "Sin agujas ni tiempo de reposo"
+            ],
+            "duration": "30-45 minutos",
+            "sessions": "6-8 sesiones",
+            "mainImage": "body-up.webp",
+            "galleryImages": [],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/body-up"
+        },
+        {
+            "id": "ozono",
+            "name": "Ozono",
+            "shortDescription": "Terapia oxigenante, purificante y regeneradora de la piel",
+            "fullDescription": "Tratamiento de ozonoterapia que aprovecha las propiedades antioxidantes y desinfectantes del ozono médico para reactivar la circulación celular, oxigenar tejidos y combatir acné y líneas de expresión.",
+            "benefits": [
+                "Oxigenación y renovación celular",
+                "Efecto bactericida y antiacné",
+                "Estimula el colágeno",
+                "Revitaliza la piel apagada"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "4-6 sesiones",
+            "mainImage": "ozono.webp",
+            "galleryImages": [],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/ozono"
+        },
+        {
+            "id": "mascara-led",
+            "name": "Máscara LED",
+            "shortDescription": "Fototerapia facial avanzada para regeneración cutánea",
+            "fullDescription": "Tecnología de diodos emisores de luz (LED) con distintas longitudes de onda para estimular la síntesis de colágeno, desinflamar, atenuar manchas y devolver luminosidad al rostro.",
+            "benefits": [
+                "Estimula la producción de elastina",
+                "Atenúa manchas y rojeces",
+                "Acción antiinflamatoria y calmante",
+                "Tratamiento relajante y sin calor"
+            ],
+            "duration": "30-40 minutos",
+            "sessions": "1 sesión semanal o quincenal",
+            "mainImage": "Mujer1Atendiendose.webp",
+            "galleryImages": [
+                "Mujer2AtendiendoseCara.webp"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/mascara-led"
+        },
+        {
+            "id": "viandas-saludables",
+            "name": "Viandas saludables",
+            "shortDescription": "Alimentación equilibrada, fresca y adaptada a tus objetivos",
+            "fullDescription": "Menús nutritivos y balanceados diseñados junto a nuestro equipo de nutrición para acompañar tu estilo de vida, descenso de peso o tonificación, listos para disfrutar.",
+            "benefits": [
+                "Platos balanceados y porcionados",
+                "Ingredientes frescos y de calidad",
+                "Ahorro de tiempo en tu rutina diaria",
+                "Complemento ideal para tus tratamientos"
+            ],
+            "duration": "Planes semanales/mensuales",
+            "sessions": "Entrega periódica",
+            "mainImage": "Nutricionista.webp",
+            "galleryImages": [],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/viandas-saludables"
+        },
+        {
+            "id": "peluqueria",
+            "name": "Peluquería",
+            "shortDescription": "Cuidado capilar, estilismo y tratamientos nutritivos integrales",
+            "fullDescription": "Servicios integrales de peluquería: corte, nutrición profunda, botox capilar, alisados y coloración con productos de primeras marcas para un cabello saludable y brillante.",
+            "benefits": [
+                "Nutrición y reparación de la fibra capilar",
+                "Asesoramiento de imagen personalizado",
+                "Brillo y sedosidad inmediata",
+                "Productos profesionales"
+            ],
+            "duration": "45-90 minutos",
+            "sessions": "Según necesidad",
+            "mainImage": "imgAboutUs.webp",
+            "galleryImages": [],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/peluqueria"
+        },
+        {
+            "id": "plasma",
+            "name": "Plasma",
+            "shortDescription": "Bioestimulación celular y regeneración dérmica profunda",
+            "fullDescription": "Tratamiento regenerativo que estimula los factores de crecimiento propios para acelerar la formación de nuevo colágeno, recuperar firmeza y rejuvenecer rostro, cuello y escote.",
+            "benefits": [
+                "Rejuvenecimiento natural y progresivo",
+                "Atenúa líneas de expresión y marcas",
+                "Mejora notable de la textura cutánea",
+                "Tratamiento autólogo y seguro"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "2-3 sesiones al año",
+            "mainImage": "Hombre1AtendiendoseCara.webp",
+            "galleryImages": [
+                "mujer3AtendiendoseCara.webp"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/plasma"
+        },
+        {
+            "id": "hilos-tensores",
+            "name": "Hilos tensores",
+            "shortDescription": "Lifting no quirúrgico para redefinir el contorno facial",
+            "fullDescription": "Procedimiento mínimamente invasivo con hilos biocompatibles reabsorbibles que traccionan suavemente los tejidos caídos y estimulan colágeno a largo plazo para un contorno facial juvenil.",
+            "benefits": [
+                "Efecto lifting y soporte inmediato",
+                "Estimulación progresiva de colágeno",
+                "Redefinición del óvalo facial y pómulos",
+                "Reabsorbibles y seguros"
+            ],
+            "duration": "45-60 minutos",
+            "sessions": "1 sesión cada 12-18 meses",
+            "mainImage": "Mujer1Hifu.webp",
+            "galleryImages": [
+                "mujer4AtendiendoseCara.webp"
+            ],
+            "price": "Consultar",
+            "calendlyLink": "https://calendly.com/ivanvieraosvaldo/hilos-tensores"
         }
     ]
 }

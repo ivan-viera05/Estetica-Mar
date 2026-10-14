@@ -201,10 +201,10 @@ window.addEventListener('message', handleCalendlyEvent);
 function categorizeServices(services) {
     return services.reduce((acc, service) => {
         if (service.name.toLowerCase().includes('facial') || 
-            ['hifu', 'limpieza-cutis', 'lifting-pestanas'].includes(service.id)) {
+            ['hifu', 'limpieza-cutis', 'lifting-pestanas', 'extensiones-pelo-por-pelo', 'ozono', 'mascara-led', 'plasma', 'hilos-tensores'].includes(service.id)) {
             acc.facial.push(service);
         } else if (service.name.toLowerCase().includes('corporal') || 
-                   ['criofraxis', 'body-vela', 'criolipolisis', 'depilacion-laser'].includes(service.id)) {
+                   ['criofraxis', 'body-vela', 'criolipolisis', 'depilacion-laser', 'bronceado-saludable', 'body-up'].includes(service.id)) {
             acc.corporal.push(service);
         } else {
             acc.bienestar.push(service);
