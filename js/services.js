@@ -218,7 +218,7 @@ async function renderServices() {
     try {
         console.log('🔄 Cargando servicios...');
         
-        const response = await fetch('/data/services.json');
+        const response = await fetch('data/services.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
