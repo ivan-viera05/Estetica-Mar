@@ -338,6 +338,8 @@ function initCookieConsent() {
     const acceptBtn = document.getElementById('acceptCookies');
     const rejectBtn = document.getElementById('rejectCookies');
     
+    if (!cookieConsent || !acceptBtn || !rejectBtn) return;
+    
     // Check if user has already made a choice
     const cookieChoice = getCookie('cookieConsent');
     
