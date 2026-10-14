@@ -130,24 +130,27 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Cachear datos de la página
     cachePageData();
     
-    // Inicializar solo componentes visibles
-    if (isInViewport('#servicesCarousel')) {
-        initializeCarousel();
-    }
-    
-    // Lazy load para componentes no visibles
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.id === 'servicesCarousel') {
-                    initializeCarousel();
+    // Inicializar carrusel si existe
+    const carouselEl = document.querySelector('#servicesCarousel');
+    if (carouselEl) {
+        if (isInViewport('#servicesCarousel')) {
+            initializeCarousel();
+        }
+        
+        // Lazy load para componentes no visibles
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'servicesCarousel') {
+                        initializeCarousel();
+                    }
+                    observer.unobserve(entry.target);
                 }
-                observer.unobserve(entry.target);
-            }
+            });
         });
-    });
 
-    observer.observe(document.querySelector('#servicesCarousel'));
+        observer.observe(carouselEl);
+    }
 
     // Initialize Calendly
     initializeCalendly();
