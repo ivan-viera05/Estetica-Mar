@@ -134,7 +134,7 @@ async function handleCalendlyEvent(e) {
             // Extraer información del evento, incluyendo la ubicación
             const eventTitle = eventData.resource?.name || "Evento sin nombre";
             const scheduledTime = eventData.resource?.start_time ? formatDateTime(eventData.resource.start_time) : "Fecha no disponible";
-            const location = eventData.resource?.location?.location || "Mar Estética, Av. Siempre Viva 742"; // Acceder a location.name
+            const location = eventData.resource?.location?.location || "Mar Estética, Mazzini 1431, Glew"; // Acceder a location.name
             console.log("Location data:", eventData.resource?.location);
 
             // Extraer información del invitado
