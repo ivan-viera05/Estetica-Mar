@@ -1,11 +1,11 @@
 // Add this constant at the top of the file with your WhatsApp number
-const WHATSAPP_NUMBER = "54911550246"; 
+const WHATSAPP_NUMBER = "5491155024690"; 
 
 // Define host numbers mapping
 const hostNumbers = {
   "Ivan Viera": "5491155024690",
-  "Ana García": "5491123456789", 
-  "Carlos López": "5491134567890"
+  "Ana García": "5491155024690", 
+  "Carlos López": "5491155024690"
 };
 
 // Function to get host info from Calendly event
