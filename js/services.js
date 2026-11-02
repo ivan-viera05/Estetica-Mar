@@ -24,7 +24,7 @@ function createServiceCard(service, isFeatured = false) {
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
                     <img src="assets/img/${service.mainImage}" 
-                         alt="${service.name}" 
+                         alt="Tratamiento ${service.name} en Mar Estética Glew" 
                          class="card-img-top"
                          style="height: 200px; object-fit: cover;"
                          loading="lazy">
@@ -45,7 +45,8 @@ function createServiceCard(service, isFeatured = false) {
                     
                     <div class="d-grid gap-2  d-flex">
                         <a href="html/service-detail.html?id=${service.id}" 
-                           class="btn btn-outline-primary">
+                           class="btn btn-outline-primary"
+                           aria-label="Ver detalles del tratamiento de ${service.name}">
                             Ver más
                         </a>
                         

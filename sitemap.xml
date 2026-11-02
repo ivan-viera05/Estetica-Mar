@@ -3,30 +3,138 @@
     <!-- Home Page -->
     <url>
         <loc>https://www.marestetica.com/</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://www.marestetica.com/html/legal.html</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
     <!-- Services Pages -->
     <url>
-        <loc>https://www.marestetica.com/servicios/hifu</loc>
-        <lastmod>2024-02-20</lastmod>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=hifu</loc>
+        <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/servicios/criofraxis</loc>
-        <lastmod>2024-02-20</lastmod>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=criofraxis</loc>
+        <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Contact Page -->
     <url>
-        <loc>https://www.marestetica.com/contacto</loc>
-        <lastmod>2024-02-20</lastmod>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=limpieza-cutis</loc>
+        <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=lifting-pestanas</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=belleza-pies-manos</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=body-vela</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=depilacion-laser</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=nutricion</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=criolipolisis</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=facial</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=masajes</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=bronceado-saludable</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=extensiones-pelo-por-pelo</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=body-up</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=ozono</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=mascara-led</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=viandas-saludables</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=peluqueria</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=plasma</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.marestetica.com/html/service-detail.html?id=hilos-tensores</loc>
+        <lastmod>2026-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>

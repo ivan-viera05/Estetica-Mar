@@ -1,18 +1,15 @@
-# Default configuration for all web crawlers
+# robots.txt for Mar Estética
 User-agent: *
-
-# Allow crawling of all content
 Allow: /
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /data/
 
-# Prevent crawling of specific directories
+# Protect backend and configuration files
+Disallow: /backend/
 Disallow: /node_modules/
-Disallow: /assets/admin/
-Disallow: /temp/
-Disallow: /css/*.css$
-Disallow: /*.json$
 
-# Rate limiting
-Crawl-delay: 10
-
-# Sitemap location
+# Sitemaps
 Sitemap: https://www.marestetica.com/sitemap.xml
+Sitemap: https://estetica-mar.vercel.app/sitemap.xml

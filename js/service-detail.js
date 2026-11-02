@@ -59,6 +59,91 @@ document.addEventListener('DOMContentLoaded', async function() {
             serviceImage.alt = service.name;
         }
 
+        // Actualizar SEO Meta Tags dinámicamente
+        const dynamicTitle = `${service.name} en Glew | Mar Estética`;
+        document.title = dynamicTitle;
+        const pageTitleEl = document.getElementById('pageTitle');
+        if (pageTitleEl) pageTitleEl.textContent = dynamicTitle;
+
+        const dynamicDesc = `Tratamiento de ${service.name} en Glew, Buenos Aires. ${service.shortDescription}. ${service.benefits ? service.benefits.slice(0, 3).join(', ') : ''}. ¡Consultá y reservá tu turno!`;
+        const metaDescEl = document.querySelector('meta[name="description"]');
+        if (metaDescEl) metaDescEl.setAttribute('content', dynamicDesc);
+
+        const canonicalEl = document.getElementById('canonicalUrl');
+        if (canonicalEl) canonicalEl.setAttribute('href', `https://www.marestetica.com/html/service-detail.html?id=${service.id}`);
+
+        const ogTitleEl = document.getElementById('ogTitle');
+        if (ogTitleEl) ogTitleEl.setAttribute('content', dynamicTitle);
+
+        const ogDescEl = document.getElementById('ogDesc');
+        if (ogDescEl) ogDescEl.setAttribute('content', dynamicDesc);
+
+        const ogImageEl = document.getElementById('ogImage');
+        if (ogImageEl) ogImageEl.setAttribute('content', `https://www.marestetica.com/assets/img/${service.mainImage}`);
+
+        // Inject Structured Data (Schema.org) for this Service and Breadcrumbs
+        const schemaData = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Inicio",
+                            "item": "https://www.marestetica.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Servicios",
+                            "item": "https://www.marestetica.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": service.name,
+                            "item": `https://www.marestetica.com/html/service-detail.html?id=${service.id}`
+                        }
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "@id": `https://www.marestetica.com/html/service-detail.html?id=${service.id}#service`,
+                    "name": service.name,
+                    "description": service.fullDescription || service.shortDescription,
+                    "provider": {
+                        "@type": "BeautySalon",
+                        "name": "Mar Estética",
+                        "telephone": "+5491155024690",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Mazzini 1431",
+                            "addressLocality": "Glew",
+                            "addressRegion": "Buenos Aires",
+                            "addressCountry": "AR"
+                        }
+                    },
+                    "areaServed": {
+                        "@type": "AdministrativeArea",
+                        "name": "Glew, Buenos Aires"
+                    },
+                    "image": `https://www.marestetica.com/assets/img/${service.mainImage}`
+                }
+            ]
+        };
+
+        let schemaScript = document.getElementById('serviceSchema');
+        if (!schemaScript) {
+            schemaScript = document.createElement('script');
+            schemaScript.id = 'serviceSchema';
+            schemaScript.type = 'application/ld+json';
+            document.head.appendChild(schemaScript);
+        }
+        schemaScript.textContent = JSON.stringify(schemaData);
+
+
         // Set up action buttons
         const bookBtn = document.getElementById('serviceBookBtn');
         if (bookBtn) {

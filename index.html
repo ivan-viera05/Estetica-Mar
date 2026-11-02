@@ -1,107 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Cache-Control en meta tags -->
-    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
-
-    <!-- Precargar recursos críticos -->
-    <link rel="preload" href="assets/img/MujerParaBackGround.webp" as="image">
-    <link rel="preload" href="css/style.css" as="style">
-
     <!-- SEO Meta Tags -->
-    <title>Mar Estética - Centro de Belleza y Bienestar Integral en Glew</title>
+    <title>Mar Estética | Centro de Estética y Bienestar en Glew</title>
     <meta name="description"
-        content="Centro de estética especializado en tratamientos faciales, HIFU, criofraxis, lifting de pestañas y más. Tecnología avanzada y profesionales certificados.">
+        content="Centro de estética en Glew. Especialistas en tratamientos faciales y corporales: HIFU, criofraxis, depilación láser definitiva, limpieza de cutis, lifting y masajes. ¡Reservá tu turno!">
     <meta name="keywords"
-        content="centro de estética, tratamientos faciales, HIFU, criofraxis, lifting de pestañas, belleza, spa, Glew">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.marestetica.com/">
-    <meta property="og:title" content="Mar Estética - Tu Centro de Belleza Integral">
-    <meta property="og:description"
-        content="Descubre nuestros tratamientos personalizados con tecnología de vanguardia para realzar tu belleza natural.">
-    <meta property="og:image" content="assets/img/logoMarEstetica-Photoroom.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.marestetica.com/">
-    <meta property="twitter:title" content="Mar Estética - Tu Centro de Belleza Integral">
-    <meta property="twitter:description"
-        content="Descubre nuestros tratamientos personalizados con tecnología de vanguardia para realzar tu belleza natural.">
-    <meta property="twitter:image" content="assets/img/logoMarEstetica-Photoroom.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/icons/iconoMarEstetica-Photoroom.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+        content="centro de estetica glew, estetica glew, hifu glew, criofraxis glew, depilacion definitiva glew, limpieza facial glew, lifting pestanas glew, masajes glew, tratamientos corporales glew, mar estetica, almirante brown">
+    <meta name="author" content="Mar Estética">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.marestetica.com/">
 
-    <!-- Bootstrap CDN first -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Geo Meta Tags (Local SEO para Glew, Buenos Aires) -->
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Glew, Provincia de Buenos Aires">
+    <meta name="geo.position" content="-34.881689;-58.372155">
+    <meta name="ICBM" content="-34.881689, -58.372155">
 
-    <!-- Your custom CSS after -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Mar Estética">
+    <meta property="og:url" content="https://www.marestetica.com/">
+    <meta property="og:title" content="Mar Estética | Centro de Estética y Bienestar en Glew">
+    <meta property="og:description"
+        content="Centro de estética en Glew. Especialistas en tratamientos faciales y corporales: HIFU, criofraxis, depilación láser definitiva, limpieza de cutis y bienestar integral.">
+    <meta property="og:image" content="https://www.marestetica.com/assets/img/logoMarEstetica-Photoroom.png">
+    <meta property="og:image:secure_url" content="https://www.marestetica.com/assets/img/logoMarEstetica-Photoroom.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Logo de Mar Estética - Centro de Belleza en Glew">
 
-    <!-- Precargar recursos críticos -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.marestetica.com/">
+    <meta property="twitter:title" content="Mar Estética | Centro de Estética y Bienestar en Glew">
+    <meta property="twitter:description"
+        content="Centro de estética en Glew. Especialistas en tratamientos faciales y corporales: HIFU, criofraxis, depilación láser definitiva y bienestar integral.">
+    <meta property="twitter:image" content="https://www.marestetica.com/assets/img/logoMarEstetica-Photoroom.png">
+    <meta property="twitter:image:alt" content="Logo de Mar Estética - Centro de Belleza en Glew">
+
+    <!-- Favicon & Web App Manifest -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/logoMarEstetica-Photoroom.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#680747">
+
+    <!-- Precargar recursos críticos (sin duplicaciones) -->
     <link rel="preload" href="assets/img/MujerParaBackGround.webp" as="image">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preconnect" href="https://assets.calendly.com">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Custom CSS & Plugins -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <!-- Schema.org markup -->
+    <!-- Schema.org Rich Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "BeautySalon",
-        "name": "Mar Estética",
-        "image": "assets/img/logoMarEstetica-Photoroom.png",
-        "description": "Centro de belleza y bienestar integral especializado en tratamientos faciales y corporales.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Mazzini 1431",
-            "addressLocality": "Glew",
-            "addressRegion": "Buenos Aires",
-            "postalCode": "B1856",
-            "addressCountry": "AR"
-        },
-        "openingHours": "Mo-Fr 09:00-20:00 Sa 09:00-14:00",
-        "telephone": "+5491155024690",
-        "priceRange": "$$",
-        "offers": {
-            "@type": "AggregateOffer",
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Tratamientos Faciales",
-                    "description": "Rejuvenecimiento facial, limpieza profunda y tratamientos anti-edad"
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://www.marestetica.com/#website",
+                "url": "https://www.marestetica.com/",
+                "name": "Mar Estética",
+                "description": "Centro de estética y belleza integral en Glew, Buenos Aires",
+                "inLanguage": "es-AR"
+            },
+            {
+                "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
+                "@id": "https://www.marestetica.com/#salon",
+                "name": "Mar Estética",
+                "alternateName": "Centro de Estética Mar - Glew",
+                "url": "https://www.marestetica.com/",
+                "logo": "https://www.marestetica.com/assets/img/logoMarEstetica-Photoroom.png",
+                "image": "https://www.marestetica.com/assets/img/logoMarEstetica-Photoroom.png",
+                "description": "Centro de estética y belleza integral en Glew, Buenos Aires. Especialistas en tratamientos faciales, corporales, HIFU, criofraxis, depilación definitiva láser, nutrición y masajes.",
+                "telephone": "+5491155024690",
+                "email": "info@marestetica.com",
+                "priceRange": "$",
+                "currenciesAccepted": "ARS",
+                "paymentAccepted": "Efectivo, Tarjeta de Crédito, Tarjeta de Débito, Transferencia",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Mazzini 1431",
+                    "addressLocality": "Glew",
+                    "addressRegion": "Buenos Aires",
+                    "postalCode": "B1856",
+                    "addressCountry": "AR"
                 },
-                {
-                    "@type": "Offer",
-                    "name": "HIFU",
-                    "description": "Ultrasonido focalizado para tensar y rejuvenecer la piel"
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -34.8816893,
+                    "longitude": -58.3721549
+                },
+                "hasMap": "https://maps.app.goo.gl/vgAivakS4DnXjkGw9",
+                "areaServed": [
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Glew"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Almirante Brown"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Longchamps"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Guernica"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Burzaco"
+                    }
+                ],
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                            "Monday",
+                            "Tuesday",
+                            "Wednesday",
+                            "Thursday",
+                            "Friday"
+                        ],
+                        "opens": "09:00",
+                        "closes": "20:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": "Saturday",
+                        "opens": "09:00",
+                        "closes": "14:00"
+                    }
+                ],
+                "sameAs": [
+                    "https://maps.app.goo.gl/vgAivakS4DnXjkGw9",
+                    "https://wa.me/5491155024690"
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "reviewCount": "3",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": "María García"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "reviewBody": "Excelente atención y resultados increíbles. Los tratamientos faciales son realmente efectivos. Totalmente recomendado."
+                    },
+                    {
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Ana Martínez"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "reviewBody": "Los resultados con el tratamiento HIFU superaron mis expectativas. El personal es muy profesional y atento."
+                    },
+                    {
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Laura Sánchez"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "reviewBody": "Me encanta el ambiente del lugar y la calidad de los servicios. Los tratamientos corporales son excelentes."
+                    }
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Servicios de Estética y Bienestar",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "HIFU",
+                                "description": "Ultrasonido focalizado para tensar y rejuvenecer la piel con efecto lifting sin cirugía."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Criofraxis",
+                                "description": "Tratamiento reductor con tecnología de frío localizado y tensado para celulitis y modelado corporal."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Limpieza de Cutis",
+                                "description": "Limpieza profunda personalizada, exfoliación, extracción y mascarillas para una piel radiante."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Lifting de Pestañas",
+                                "description": "Tratamiento para realzar y curvar las pestañas naturales de forma duradera."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Depilación Láser Definitiva",
+                                "description": "Tecnología láser avanzada para eliminación definitiva del vello facial y corporal."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Criolipólisis",
+                                "description": "Reducción de adiposidad localizada mediante frío controlado sin cirugía."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Body Vela (VelaSlim)",
+                                "description": "Tratamiento modelador, reductor de contorno y tonificación de la piel."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Masajes Corporales",
+                                "description": "Masajes descontracturantes, relajantes y bienestar integral."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Belleza de Pies y Manos",
+                                "description": "Cuidado estético integral de uñas, manos y pies."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Body Up",
+                                "description": "Estimulación electromagnética neuromuscular para levantamiento y firmeza muscular."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Plasma Rico en Plaquetas (PRP)",
+                                "description": "Bioestimulación celular y rejuvenecimiento facial con factores de crecimiento."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Hilos Tensores",
+                                "description": "Lifting no quirúrgico para reposicionamiento de tejidos y firmeza facial."
+                            }
+                        }
+                    ]
                 }
-            ]
-        }
+            }
+        ]
     }
     </script>
 
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <title>Mar estetica</title>
-    <meta name="theme-color" content="#680747">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
 </head>
 
 <body class="mar-estetica">
@@ -124,9 +332,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="assets/img/logoMarEstetica-Photoroom.png" alt="Mar Estética">
+                <img src="assets/img/logoMarEstetica-Photoroom.png" alt="Mar Estética - Centro de belleza y estética en Glew">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -148,7 +356,7 @@
         <picture class="hero-background">
             <source srcset="assets/img/MujerParaBackGround.webp" type="image/webp">
             <img src="assets/img/MujerParaBackGround.webp" 
-                 alt="Background" 
+                 alt="Tratamientos de belleza y estética integral en Mar Estética Glew" 
                  loading="eager"
                  width="1920"
                  height="1080"
@@ -325,9 +533,8 @@
                 <div class="about-img">
                     <picture>
                         <source srcset="assets/img/imgAboutUs.webp" type="image/webp">
-                        <source srcset="assets/img/imgAboutUs.png" type="image/png">
                         <img src="assets/img/imgAboutUs.webp" 
-                             alt="Nuestro Centro" 
+                             alt="Instalaciones y consultorio de Mar Estética en Glew" 
                              class="img-fluid rounded shadow"
                              width="600"
                              height="400">
@@ -648,7 +855,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="btn btn-primary btn-floating">
+    <button id="back-to-top" class="btn btn-primary btn-floating" aria-label="Volver arriba">
         <i class="bi bi-arrow-up"></i>
     </button>
 
