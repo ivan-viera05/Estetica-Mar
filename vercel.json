@@ -72,6 +72,10 @@
       "dest": "/favicon.ico"
     },
     {
+      "src": "/google9b03dcc79dbc29f0.html",
+      "dest": "/google9b03dcc79dbc29f0.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }
