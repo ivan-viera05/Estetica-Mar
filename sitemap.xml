@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Home Page -->
     <url>
-        <loc>https://www.marestetica.com/</loc>
+        <loc>https://estetica-mar.vercel.app/</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,7 +10,7 @@
 
     <!-- Legal Pages -->
     <url>
-        <loc>https://www.marestetica.com/html/legal.html</loc>
+        <loc>https://estetica-mar.vercel.app/html/legal.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -18,121 +18,121 @@
 
     <!-- Services Pages -->
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=hifu</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=hifu</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=criofraxis</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=criofraxis</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=limpieza-cutis</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=limpieza-cutis</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=lifting-pestanas</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=lifting-pestanas</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=belleza-pies-manos</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=belleza-pies-manos</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=body-vela</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=body-vela</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=depilacion-laser</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=depilacion-laser</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=nutricion</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=nutricion</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=criolipolisis</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=criolipolisis</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=facial</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=facial</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=masajes</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=masajes</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=bronceado-saludable</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=bronceado-saludable</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=extensiones-pelo-por-pelo</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=extensiones-pelo-por-pelo</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=body-up</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=body-up</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=ozono</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=ozono</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=mascara-led</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=mascara-led</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=viandas-saludables</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=viandas-saludables</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=peluqueria</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=peluqueria</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=plasma</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=plasma</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.marestetica.com/html/service-detail.html?id=hilos-tensores</loc>
+        <loc>https://estetica-mar.vercel.app/html/service-detail.html?id=hilos-tensores</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

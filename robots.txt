@@ -11,5 +11,4 @@ Disallow: /backend/
 Disallow: /node_modules/
 
 # Sitemaps
-Sitemap: https://www.marestetica.com/sitemap.xml
 Sitemap: https://estetica-mar.vercel.app/sitemap.xml

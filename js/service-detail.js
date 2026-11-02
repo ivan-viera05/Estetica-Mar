@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (metaDescEl) metaDescEl.setAttribute('content', dynamicDesc);
 
         const canonicalEl = document.getElementById('canonicalUrl');
-        if (canonicalEl) canonicalEl.setAttribute('href', `https://www.marestetica.com/html/service-detail.html?id=${service.id}`);
+        if (canonicalEl) canonicalEl.setAttribute('href', `https://estetica-mar.vercel.app/html/service-detail.html?id=${service.id}`);
 
         const ogTitleEl = document.getElementById('ogTitle');
         if (ogTitleEl) ogTitleEl.setAttribute('content', dynamicTitle);
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (ogDescEl) ogDescEl.setAttribute('content', dynamicDesc);
 
         const ogImageEl = document.getElementById('ogImage');
-        if (ogImageEl) ogImageEl.setAttribute('content', `https://www.marestetica.com/assets/img/${service.mainImage}`);
+        if (ogImageEl) ogImageEl.setAttribute('content', `https://estetica-mar.vercel.app/assets/img/${service.mainImage}`);
 
         // Inject Structured Data (Schema.org) for this Service and Breadcrumbs
         const schemaData = {
@@ -92,25 +92,25 @@ document.addEventListener('DOMContentLoaded', async function() {
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Inicio",
-                            "item": "https://www.marestetica.com/"
+                            "item": "https://estetica-mar.vercel.app/"
                         },
                         {
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Servicios",
-                            "item": "https://www.marestetica.com/#services"
+                            "item": "https://estetica-mar.vercel.app/#services"
                         },
                         {
                             "@type": "ListItem",
                             "position": 3,
                             "name": service.name,
-                            "item": `https://www.marestetica.com/html/service-detail.html?id=${service.id}`
+                            "item": `https://estetica-mar.vercel.app/html/service-detail.html?id=${service.id}`
                         }
                     ]
                 },
                 {
                     "@type": "Service",
-                    "@id": `https://www.marestetica.com/html/service-detail.html?id=${service.id}#service`,
+                    "@id": `https://estetica-mar.vercel.app/html/service-detail.html?id=${service.id}#service`,
                     "name": service.name,
                     "description": service.fullDescription || service.shortDescription,
                     "provider": {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                         "@type": "AdministrativeArea",
                         "name": "Glew, Buenos Aires"
                     },
-                    "image": `https://www.marestetica.com/assets/img/${service.mainImage}`
+                    "image": `https://estetica-mar.vercel.app/assets/img/${service.mainImage}`
                 }
             ]
         };
