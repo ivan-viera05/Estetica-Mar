@@ -399,3 +399,52 @@ const updateDynamicImages = (container) => {
         });
     }
 };
+
+// ==========================================
+// Gallery Filter & Lightbox Handling
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const categories = (item.getAttribute('data-category') || '').split(' ');
+                if (filterValue === 'all' || categories.includes(filterValue)) {
+                    item.style.display = 'block';
+                    setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => { item.style.display = 'none'; }, 250);
+                }
+            });
+        });
+    });
+
+    // Gallery Modal Preview
+    const modalEl = document.getElementById('galleryModal');
+    if (modalEl) {
+        modalEl.addEventListener('show.bs.modal', (event) => {
+            const trigger = event.relatedTarget;
+            if (!trigger) return;
+            const imgSrc = trigger.getAttribute('data-img');
+            const title = trigger.getAttribute('data-title');
+            const desc = trigger.getAttribute('data-desc');
+
+            const modalImg = document.getElementById('galleryModalImg');
+            const modalTitle = document.getElementById('galleryModalTitle');
+            const modalDesc = document.getElementById('galleryModalDesc');
+
+            if (modalImg) modalImg.src = imgSrc;
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalDesc) modalDesc.textContent = desc;
+        });
+    }
+});
